@@ -153,12 +153,14 @@
                 width: RUNNER_WIDTH,
                 height: RUNNER_HEIGHT,
                 draw() {
-                    if (gameOver) {
-                        ctx.drawImage(crashImage, this.x, this.y, this.width, this.height);
-                    } else {
-                        const frame = (timer % 60 > 30) ? runnerAImage : runnerBImage;
-                        ctx.drawImage(frame, this.x, this.y, this.width, this.height);
-                    }
+                    // if (gameOver) {
+                    //     ctx.drawImage(crashImage, this.x, this.y, this.width, this.height);
+                    // } else {
+                    //     const frame = (timer % 60 > 30) ? runnerAImage : runnerBImage;
+                    //     ctx.drawImage(frame, this.x, this.y, this.width, this.height);
+                    // }
+                    const frame = (timer % 60 > 30) ? runnerAImage : runnerBImage;
+                    ctx.drawImage(frame, this.x, this.y, this.width, this.height);
                 }
             };
 
